@@ -216,4 +216,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ---
 
-For detailed implementation guidance, please refer to the [Implementation Guide](./implementation-guide.md).
+## Additional Documentation
+
+- [Implementation Guide](./commercial-ratio-analyzer-documentation.md)
+- [Agile Program Management Guide](./agile-program-management.md)
