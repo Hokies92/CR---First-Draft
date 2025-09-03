@@ -181,15 +181,19 @@ const CommercialRatioAnalyzer = () => {
           <div className="grid grid-cols-4 gap-6 mb-6">
             <div className="flex flex-col border rounded-lg p-4 bg-blue-50">
               <span className="text-xs text-gray-600">Market Cap Impact</span>
-              <span className="text-2xl font-bold">${Math.abs(calculatedValues.marketCapImpact).toFixed(2)}M</span>
+              <span className="text-2xl font-bold">
+                {calculatedValues.marketCapImpact >= 0 ? '+' : ''}${calculatedValues.marketCapImpact.toFixed(2)}M
+              </span>
               <span className={`text-sm ${calculatedValues.marketCapImpact >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {calculatedValues.marketCapImpact >= 0 ? '+' : ''}{calculatedValues.percentageGrowth.toFixed(2)}%
               </span>
             </div>
-            
+
             <div className="flex flex-col border rounded-lg p-4 bg-blue-50">
               <span className="text-xs text-gray-600">EPS Impact</span>
-              <span className="text-2xl font-bold">${Math.abs(calculatedValues.epsImpact).toFixed(2)}</span>
+              <span className="text-2xl font-bold">
+                {calculatedValues.epsImpact >= 0 ? '+' : ''}${calculatedValues.epsImpact.toFixed(2)}
+              </span>
               <span className={`text-sm ${calculatedValues.epsImpact >= 0 ? 'text-green-600' : 'text-red-600'}`}>
                 {calculatedValues.epsImpact >= 0 ? '+' : ''}{((calculatedValues.epsImpact / (calculatedValues.ebitda/financials.sharesOutstanding)) * 100).toFixed(2)}%
               </span>
